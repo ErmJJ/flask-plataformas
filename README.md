@@ -62,7 +62,7 @@ Lista de los usuarios.
 
 3. Ejecuta el servidor:
    ```bash
-   python app.py
+   python main.py
    ```
 
 ---
