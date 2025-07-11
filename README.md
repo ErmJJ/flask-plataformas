@@ -65,27 +65,13 @@ Lista de los usuarios.
    python app.py
    ```
 
-4. Abre Postman y carga la colección `Practica 2 - Flask.postman_collection.json`.
-
----
-
-## 📂 Estructura del proyecto
-
-```
-Practica2-Flask/
-├── app.py
-├── Practica 2 - Flask.postman_collection.json
-└── README.md
-```
-
 ---
 
 ## 🧪 Pruebas con Postman
 
 1. Abre Postman.
-2. Importa el archivo `Practica 2 - Flask.postman_collection.json`.
-3. Ejecuta la solicitud `GET` incluida en la colección.
-4. Verifica la respuesta en la pestaña "Body".
+2. Ejecuta la solicitud `GET` incluida en la colección.
+3. Verifica la respuesta en la pestaña "Body".
 
 ---
 
