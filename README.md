@@ -1,6 +1,8 @@
 # 🧪 Práctica 2 - Flask API
 
-Este proyecto contiene una colección de Postman para probar un endpoint desarrollado con Flask. El objetivo es realizar una solicitud `GET` que devuelve un saludo personalizado basado en un parámetro `id`.
+Este proyecto contiene una API sencilla desarrollada con Flask. El objetivo es practicar el manejo de rutas, parámetros de consulta y respuestas HTTP. La colección de Postman incluida permite probar el endpoint de forma rápida.
+
+---
 
 ## 🚀 Endpoint disponible
 
@@ -9,23 +11,31 @@ Este proyecto contiene una colección de Postman para probar un endpoint desarro
 - **URL completa:** `http://127.0.0.1:5000/user/api/v1/saludo?id=777`
 - **Método:** `GET`
 - **Parámetro de consulta:**  
-  - `id` (obligatorio): Identificador del usuario para generar el saludo.
+  - `id` (opcional): Si se proporciona, devuelve un mensaje con el ID del usuario. Si no se proporciona, devuelve una lista genérica.
 
-#### 📥 Ejemplo de solicitud
+#### 📥 Ejemplo de solicitud con parámetro
 
 ```http
 GET http://127.0.0.1:5000/user/api/v1/saludo?id=777
 ```
 
-#### 📤 Ejemplo de respuesta esperada
+#### 📤 Ejemplo de respuesta
 
-```json
-{
-  "saludo": "Hola, usuario con ID 777"
-}
+```text
+El id del usuario es 777
 ```
 
-> ⚠️ Asegúrate de que el servidor Flask esté corriendo en `localhost:5000` antes de realizar la solicitud.
+#### 📥 Ejemplo de solicitud sin parámetro
+
+```http
+GET http://127.0.0.1:5000/user/api/v1/saludo
+```
+
+#### 📤 Ejemplo de respuesta
+
+```text
+Lista de los usuarios.
+```
 
 ---
 
@@ -35,7 +45,9 @@ GET http://127.0.0.1:5000/user/api/v1/saludo?id=777
 - Flask
 - Postman (opcional, para pruebas manuales)
 
-## 🧰 Instalación y ejecución
+---
+
+## ⚙️ Instalación y ejecución
 
 1. Clona este repositorio:
    ```bash
@@ -43,12 +55,12 @@ GET http://127.0.0.1:5000/user/api/v1/saludo?id=777
    cd practica2-flask
    ```
 
-2. Instala las dependencias:
+2. Instala Flask:
    ```bash
    pip install flask
    ```
 
-3. Ejecuta el servidor Flask:
+3. Ejecuta el servidor:
    ```bash
    python app.py
    ```
@@ -81,15 +93,10 @@ Practica2-Flask/
 
 - Puedes modificar el valor del parámetro `id` para probar diferentes respuestas.
 - Este proyecto es parte de una práctica académica para aprender sobre APIs REST con Flask.
-
----
-
-## 📜 Licencia
-
-Este proyecto está bajo la licencia MIT. Puedes usarlo, modificarlo y distribuirlo libremente.
+- El servidor corre en modo `debug`, lo que facilita el desarrollo y la depuración.
 
 ---
 
 ## 👨‍💻 Autor
 
-**Julián Hernández** 
+**Julián Hernández**
